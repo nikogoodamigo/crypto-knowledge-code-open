@@ -1,3 +1,5 @@
+/* MAIN */
+
 body{
   font-family:' Montserrat', sans-serif;
   text-align: center;
@@ -6,6 +8,20 @@ body{
 h1, h2, h3, h4, h5, h6{
   font-family:' Montserrat', sans-serif;
   font-weight: 300;
+}
+
+p{
+  font-family:' Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.main-h1{
+  padding: 25px;
+  font-size: 3rem;
+}
+
+.main-p{
+  font-size: 1.5rem;
 }
 
 .navbar-logo{
@@ -35,7 +51,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #overview{
-  background-color: #eeeeee; 
+  background-color: #eeeeee;
 }
 
 .padding-overview{
@@ -84,6 +100,9 @@ h1, h2, h3, h4, h5, h6{
 
 #footer{
     background-color: #393e46;
+    color: white;
+    bottom:0;
+    width:100%;
 }
 
 .footer-row{
@@ -93,4 +112,74 @@ h1, h2, h3, h4, h5, h6{
 
 .footer-icon{
   color: #eeeeee;
+}
+
+.copyright{
+  padding: 25px;
+}
+
+/* Placeholder */
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+/* OVERVIEW */
+
+.overview-div{
+  padding:75px 150px;
+  text-align: justify;
+}
+
+.overview-top{
+  text-align: center;
+  padding: 25px;
+}
+
+.overview-h1{
+  font-size: 3rem;
+}
+
+.overview-p{
+  font-size: 1.5rem;
+}
+
+.crypto-icon{
+  width: 50px;
+  height: 50px;
+}
+
+/* NEWS */
+.news-div{
+  padding:75px 150px;
+  text-align: justify;
+}
+
+.news-heading{
+  text-align: left;
+}
+
+.news-img-div{
+  text-align:  right;
+}
+
+.news-img{
+  border-radius: 20px;
+  height: 190px;
+}
+
+
+.news-p{
+  padding-top: 25px;
+  font-size: 1.5rem;
 }

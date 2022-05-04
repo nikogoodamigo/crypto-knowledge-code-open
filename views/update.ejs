@@ -1,0 +1,18 @@
+<%- include('partials/panel-header'); -%>
+<h1 class="main-h1"> Update Crypto </h1>
+
+<form action="/update" method="post">
+  <div class="compose-form" action="index.html" method="post">
+    <label>Name</label>
+    <input class="form-control" value="<%=name%>" type="text" name="cryptoName">
+    <label>Post</label>
+    <textarea class="form-control" name="cryptoDescription" style="height: 300px;"><%=description%></textarea>
+    <label>Logo</label>
+    <input class="form-control" value="<%=logo%>" type="text" name="cryptoLogo">
+    <label>Id</label>
+    <input class="form-control" value="<%=_id%>" type="text" name="cryptoId" readonly>
+    <p>
+  </div>
+    <button type="submit" name="button" class="btn btn-primary">Publish Update</button>
+</form>
+<%- include('partials/footer'); -%>

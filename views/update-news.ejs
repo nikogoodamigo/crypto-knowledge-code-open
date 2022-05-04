@@ -1,0 +1,22 @@
+<%- include('partials/panel-header'); -%>
+<h1 class="main-h1"> Update Article </h1>
+
+<form action="/update-news" method="post">
+  <div class="compose-form" action="index.html" method="post">
+    <label>Author</label>
+    <input class="form-control" value="<%=author%>" type="text" name="articleAuthor">
+    <label>Title</label>
+    <input class="form-control" value="<%=name%>" type="text" name="articleName">
+    <label>Post Content</label>
+    <textarea class="form-control" name="articleContent" style="height: 300px;"><%=content%></textarea>
+    <label>Photo</label>
+    <input class="form-control" value="<%=photo%>" type="text" name="articlePhoto">
+    <label>Date</label>
+    <input class="form-control" value="<%=date%>" type="text" name="articleDate">
+    <label>Id</label>
+    <input class="form-control" value="<%=_id%>" type="text" name="articleId" readonly>
+    <p>
+  </div>
+    <button type="submit" name="button" class="btn btn-primary">Publish Update</button>
+</form>
+<%- include('partials/footer'); -%>

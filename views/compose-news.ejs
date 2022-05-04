@@ -1,0 +1,20 @@
+<%- include('partials/panel-header'); -%>
+<h1 class="main-h1"> Compose Article </h1>
+
+<form action="/compose-news" method="post">
+  <div class="compose-form" action="index.html" method="post">
+    <label>Author</label>
+    <input class="form-control" placeholder="Author's name" type="text" name="articleAuthor">
+    <label>Title</label>
+    <input class="form-control" placeholder="Name your article" type="text" name="articleName">
+    <label>Post Content</label>
+    <textarea class="form-control" placeholder="Write your article" name="articleContent" style="height: 300px;"></textarea>
+    <label>Photo</label>
+    <input class="form-control" placeholder="Link a photograph" type="text" name="articlePhoto">
+    <label>Date</label>
+    <input class="form-control" placeholder="Choose Date" type="text" name="articleDate">
+    <p>
+  </div>
+    <button type="submit" name="button" class="btn btn-primary">Publish</button>
+</form>
+<%- include('partials/footer'); -%>

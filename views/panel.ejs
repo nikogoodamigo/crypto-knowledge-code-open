@@ -1,0 +1,24 @@
+<%- include('partials/panel-header'); -%>
+
+  <div class="content">
+      <div class="row">
+        <div class="col overv">
+          <h1>Kryptowaluty</h1>
+          <h1>Ilość:</h1>
+          <h2><%=numberOfCryptos%></h2>
+          <form class="" action="/panel-crypto">
+            <button type="submit" name="button" class="btn btn-outline-dark">Zobacz</button>
+          </form>
+        </div>
+        <div class="col overv">
+          <h1>Wiadomości</h1>
+          <h1>Ilość:</h1>
+          <h2><%=numberOfArticles%></h2>
+          <form class="" action="/panel-news">
+            <button type="submit" name="button" class="btn btn-outline-dark">Zobacz</button>
+          </form>
+        </div>
+      </div>
+  </div>
+
+<%- include('partials/footer'); -%>

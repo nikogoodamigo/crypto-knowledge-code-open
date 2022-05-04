@@ -1,0 +1,16 @@
+<%- include('partials/panel-header'); -%>
+<h1 class="main-h1"> Compose Crypto </h1>
+
+<form action="/compose-crypto" method="post">
+  <div class="compose-form" action="index.html" method="post">
+    <label>Name</label>
+    <input class="form-control" placeholder="Name crypto" type="text" name="cryptoName">
+    <label>Post</label>
+    <textarea class="form-control" placeholder="Description" name="cryptoDescription" style="height: 300px;"></textarea>
+    <label>Logo</label>
+    <input class="form-control" placeholder="Link to logo" type="text" name="cryptoLogo">
+    <p>
+  </div>
+    <button type="submit" name="button" class="btn btn-primary">Publish</button>
+</form>
+<%- include('partials/footer'); -%>

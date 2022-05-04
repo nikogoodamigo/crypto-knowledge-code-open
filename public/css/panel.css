@@ -1,0 +1,17 @@
+
+.content{
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 15px;
+}
+
+.overv{
+  padding: 15px;
+  border: 15px solid #393e46;
+  border-radius: 15px;
+  margin: 15px;
+}
+
+.compose-form{
+  padding: 15px 50px;
+}

@@ -1,0 +1,34 @@
+<%- include('partials/header'); -%>
+
+<h1 class="main-h1">Kryptowaluty</h1>
+<p class="main-p">Tutaj znajdziesz informacje o poszczególnych kryptowalutach</p>
+
+<div class="album py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+      <% overviews.forEach(function(overview){ %>
+      <div class="col">
+        <div class="card shadow-sm">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <title>Placeholder</title>
+            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em"><%=overview.name%></text>
+          </svg>
+
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <form class="" action="/overview/<%=overview._id%>" method="get">
+                  <button type="submit" class="btn btn-sm btn-outline-secondary">Zobacz</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%}); %>
+    </div>
+  </div>
+</div>
+<%- include('partials/footer'); -%>

@@ -1,0 +1,71 @@
+<%- include('partials/header'); -%>
+<!-- overview -->
+<div class="row padding-overview" id="#overview">
+  <div class="col-lg-6">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h1>Znajdziesz tu wszystko co potrzebne do rozpoczęcia przygody z kryptowalutami</h1>
+        </div>
+        <div class="carousel-item">
+          <h1>Kursy kryptowalut</h1>
+          <button type="button" name="button" class="btn btn-outline-dark main-button">Sprawdź</button>
+        </div>
+        <div class="carousel-item">
+          <h1>Czym jest blockchain?</h1>
+          <button type="button" name="button" class="btn btn-outline-dark main-button"> Dowiedz się więcej</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <img class="big-logo" src="/images/ck-logo.png">
+  </div>
+</div>
+<!-- options -->
+<div class="row options" id="#options">
+  <h1 class="options-h1">Co u nas znajdziesz?</h1>
+  <div class="col-lg-4 options-padding">
+    <i class="far fa-newspaper fa-5x icon"></i>
+    <h1>Wiadomości</h1>
+    <p>W tej sekcji znajdziesz wiadomości dotyczące rynku kryptowalut</p>
+    <form class="" action="/news" method="get">
+      <button type="submit" name="button" class="btn btn-outline-light">Sprawdź</button>
+    </form>
+  </div>
+  <div class="col-lg-4 options-padding">
+    <i class="fab fa-bitcoin fa-5x icon"></i>
+    <h1>Kryptowaluty</h1>
+    <p>Tutaj znajdziesz aktualne informacje o kryptowalutach i wykorzystywanej przez nie technologii</p>
+    <form class="" action="/cryptos" method="get">
+      <button type="submit" name="button" class="btn btn-outline-light">Sprawdź</button>
+    </form>
+  </div>
+  <div class="col-lg-4 options-padding">
+    <i class="fas fa-chart-line fa-5x icon"></i>
+    <h1>Ceny</h1>
+    <p>Wiemy, że dla każdego fana kryptowaut ceny aktualne ceny są bardzo ważne, dlatego w tej sekcji umieściliśmy aktualne kursy najpopularniejszych kryptowalut</p>
+    <form class="" action="/prices" method="get">
+      <button type="submit" name="button" class="btn btn-outline-light">Sprawdź</button>
+    </form>
+  </div>
+</div>
+<!-- newsletter -->
+<div class="newsletter">
+  <div id="carouselExampleSlidesOnly2" class="carousel slide options-padding" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h1>Bądź na bieżąco</h1>
+      </div>
+      <div class="carousel-item">
+        <h1>Otrzymuj informację o nowych wiadomościach i postach</h1>
+      </div>
+      <div class="carousel-item">
+        <h1>Nie przegap niczego</h1>
+      </div>
+    </div>
+    <p>Zapisz się na nasz newsletter</p>
+    <button type="button" name="button" class="btn btn-outline-dark">Zapisz się</button>
+  </div>
+</div>
+<%- include('partials/footer'); -%>
