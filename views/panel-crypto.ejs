@@ -10,22 +10,28 @@
     </div>
 
     <% overviews.forEach(function(overview){ %>
-
-      <div class="overv box">
-        <h1><%= overview.name %></h1>
-        <div class="col boxcol">
-          <form action="/delete-crypto" method="post">
-            <button class="btn btn-sm btn-outline-secondary" type="submit" name="button" value="<%=overview._id%>">Usuń</button>
-          </form>
+      <div class="card">
+        <div class="card-header">
+          <%= overview.name %>
         </div>
-        <div class="col boxcol">
-          <form class="" action="/update/<%=overview._id%>" method="get">
-            <button type="submit" class="btn btn-sm btn-outline-secondary">Zobacz</button>
-          </form>
+        <div class="card-body">
+          <div class="col boxcol">
+            <form action="/delete-crypto" method="post">
+              <button class="btn btn-sm btn-outline-secondary" type="submit" name="button" value="<%=overview._id%>">Usuń</button>
+            </form>
+          </div>
+          <div class="col boxcol">
+            <form class="" action="/update/<%=overview._id%>" method="get">
+              <button type="submit" class="btn btn-sm btn-outline-secondary">Zobacz</button>
+            </form>
+          </div>
         </div>
       </div>
+
     <%}); %>
   </div>
 </div>
+
+
 
 <%- include('partials/footer'); -%>
