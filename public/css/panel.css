@@ -33,3 +33,18 @@
 .btn-warning:hover{
   color: white;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .album{
+    height: auto;
+  }
+
+  .col{
+    width: 100%;
+  }
+
+  #footer{
+    margin-top: 10px;
+  }
+}
