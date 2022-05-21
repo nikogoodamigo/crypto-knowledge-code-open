@@ -19,3 +19,17 @@
 .card{
   margin: 15px 0;
 }
+.btn{
+  width: 150px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.btn-warning{
+  color: white;
+  width: 250px;
+}
+
+.btn-warning:hover{
+  color: white;
+}

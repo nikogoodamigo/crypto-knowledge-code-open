@@ -1,24 +1,43 @@
 <%- include('partials/panel-header'); -%>
 
-  <div class="content">
-      <div class="row">
-        <div class="col overv">
-          <h1>Kryptowaluty</h1>
-          <h1>Ilość:</h1>
-          <h2><%=numberOfCryptos%></h2>
-          <form class="" action="/panel-crypto">
-            <button type="submit" name="button" class="btn btn-outline-dark">Zobacz</button>
-          </form>
-        </div>
-        <div class="col overv">
-          <h1>Wiadomości</h1>
-          <h1>Ilość:</h1>
-          <h2><%=numberOfArticles%></h2>
-          <form class="" action="/panel-news">
-            <button type="submit" name="button" class="btn btn-outline-dark">Zobacz</button>
-          </form>
+<div class="album" style="height: 500px;">
+  <div class="card-header">
+    Udostępnione materiały
+  </div>
+  <div class="card-body">
+
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            Kryptowaluty
+          </div>
+          <div class="card-body">
+            <p>Udostępnione kryptowaluty:</p>
+            <p><%=numberOfCryptos%></p>
+            <form class="" action="/panel-crypto">
+              <button type="submit" name="button" class="btn btn-outline-dark">Zobacz</button>
+            </form>
+          </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            Artukuły
+          </div>
+          <div class="card-body">
+            <p>Udpostępnione wiadomości:</p>
+            <p><%=numberOfArticles%></p>
+            <form class="" action="/panel-news">
+              <button type="submit" name="button" class="btn btn-outline-dark">Zobacz</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
+</div>
 
 <%- include('partials/footer'); -%>

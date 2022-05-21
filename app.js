@@ -147,7 +147,7 @@ app.post("/compose-crypto", function(req, res) {
 
   overview.save(function(err){
     if (!err) {
-      res.redirect("/compose-crypto");
+      res.redirect("/panel-crypto");
     };
   });
 
@@ -175,7 +175,7 @@ app.post("/update", function(req, res){
   Overview.updateOne({_id: requestedOverviewId}, { $set: {name: cryptoName, description: cryptoDescription, logo: cryptoLogo}}, function(err){
     if(!err){
       console.log(requestedOverviewId + " updated");
-      res.redirect("panel");
+      res.redirect("/panel-crypto");
     }
   });
 });
@@ -217,7 +217,7 @@ app.post("/compose-news", function(req, res) {
 
   article.save(function(err){
     if (!err) {
-      res.redirect("/compose-news");
+      res.redirect("/panel-news");
     };
   });
 

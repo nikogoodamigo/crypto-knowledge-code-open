@@ -1,34 +1,44 @@
 <%- include('partials/panel-header'); -%>
 
 <div class="album">
-  <div class="container">
-
+  <div class="card-header" >
+    Udostępnione kryptowaluty
+  </div>
+  <div class="card-body">
     <div class="container">
       <form class="" action="/compose-crypto" method="get">
-        <button type="submit" name="button" class="btn btn-sm btn-outline-secondary">Dodaj</button>
+        <button type="submit" name="button" class="btn btn-warning">Dodaj kryptowalutę</button>
       </form>
     </div>
 
     <% overviews.forEach(function(overview){ %>
-      <div class="card">
+      <div class="card" style = "text-align: left;">
         <div class="card-header">
           <%= overview.name %>
         </div>
         <div class="card-body">
-          <div class="col boxcol">
-            <form action="/delete-crypto" method="post">
-              <button class="btn btn-sm btn-outline-secondary" type="submit" name="button" value="<%=overview._id%>">Usuń</button>
-            </form>
-          </div>
-          <div class="col boxcol">
-            <form class="" action="/update/<%=overview._id%>" method="get">
-              <button type="submit" class="btn btn-sm btn-outline-secondary">Zobacz</button>
-            </form>
+          <div class="row">
+            <div class="col boxcol">
+              <form action="/delete-crypto" method="post">
+                <button class="btn btn-danger" type="submit" name="button" value="<%=overview._id%>">Usuń</button>
+              </form>
+              <form class="" action="/update/<%=overview._id%>" method="get">
+                <button type="submit" class="btn btn-primary">Zaktualizuj</button>
+              </form>
+            </div>
+            <div class="col boxcol">
+              <p><%=overview.description.substring(0, 250)%>...</p>
+            </div>
           </div>
         </div>
       </div>
 
     <%}); %>
+
+    <form class="" action="/panel" method="get">
+      <button type="submit" name="button" class="btn btn-primary">Wróć do panelu</button>
+    </form>
+
   </div>
 </div>
 
