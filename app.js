@@ -86,6 +86,7 @@ app.get("/overview/:overviewId", function(req, res){
       logo: overview.logo,
       description: overview.description
     });
+    console.log(overview.logo);
   });
 });
 
