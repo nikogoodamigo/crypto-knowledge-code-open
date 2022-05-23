@@ -5,6 +5,10 @@
   padding: 15px;
 }
 
+.album{
+  min-height: 490px;;
+}
+
 .overv{
   padding: 15px;
   border: 15px solid #393e46;
@@ -35,24 +39,24 @@
 }
 
 #footer{
-  position: relative;
-  margin-top: 5px;
+   bottom: 0;
 }
 
-@media only screen and (max-width: 828px) {
+@media (max-width: 768px) {
   /* For mobile phones: */
   p{
     font-size: 2.3rem;
   }
   .album{
-    height: auto;
+    min-height: 600px;
   }
 
   .col{
     width: 100%;
   }
 
-  #footer{
-    position: fixed;
+  #footer p{
+    height: 10px;
+    font-size: 1rem;
   }
 }

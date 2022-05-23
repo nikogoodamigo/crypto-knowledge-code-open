@@ -101,9 +101,9 @@ p{
 #footer{
     background-color: #393e46;
     color: white;
-    bottom:0;
     width:100%;
-}
+    bottom: 0px;
+  }
 
 .footer-row{
   width: 200px;
@@ -114,9 +114,6 @@ p{
   color: #eeeeee;
 }
 
-.copyright{
-  padding: 25px;
-}
 
 /* Placeholder */
 
@@ -139,7 +136,7 @@ p{
 .overview-div{
   padding:75px 150px;
   text-align: justify;
-  height: auto;
+  min-height: 490px;
 }
 
 .overview-top{
