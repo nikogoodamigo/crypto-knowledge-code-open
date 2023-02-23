@@ -4,12 +4,11 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 const rendering = require("./functions/panel-rendering.js");
 
-// mongoose.connect("mongodb://localhost:27017/cryptoDB", {
-//   useUnifiedTopology: true,
-//   useNewUrlParser: true
-// });
+mongoose.connect("mongodb://localhost:27017/cryptoDB", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
 
- mongoose.connect("mongodb+srv://dan-admin:Test123!@cluster0.c4zsp.mongodb.net/cryptoDB", {useUnifiedTopology: true, useNewUrlParser: true});
 
 const overviewSchema = {
   name: String,
