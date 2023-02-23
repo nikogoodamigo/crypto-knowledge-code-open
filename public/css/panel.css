@@ -1,4 +1,4 @@
-
+/*panel CSS*/
 .content{
   margin-top: 80px;
   margin-bottom: 80px;
@@ -40,6 +40,13 @@
 
 #footer{
    bottom: 0;
+}
+
+/*login-page CSS*/
+
+.login-container{
+  color: grey;
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {

@@ -102,7 +102,7 @@ p{
     background-color: #393e46;
     color: white;
     width:100%;
-    bottom: 0px;
+    bottom: 0;
   }
 
 .footer-row{
@@ -114,6 +114,9 @@ p{
   color: #eeeeee;
 }
 
+.page{
+  min-height: 675px;
+}
 
 /* Placeholder */
 

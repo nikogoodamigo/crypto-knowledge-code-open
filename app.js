@@ -2,14 +2,14 @@ const express = require("express");
 const https = require("https");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const rendering = require("./functions/panel-rendering.js");
 
 // mongoose.connect("mongodb://localhost:27017/cryptoDB", {
 //   useUnifiedTopology: true,
 //   useNewUrlParser: true
 // });
 
-mongoose.connect("mongodb+srv://dan-admin:Test123!@cluster0.c4zsp.mongodb.net/cryptoDB", {useUnifiedTopology: true, useNewUrlParser: true});
-
+ mongoose.connect("mongodb+srv://dan-admin:Test123!@cluster0.c4zsp.mongodb.net/cryptoDB", {useUnifiedTopology: true, useNewUrlParser: true});
 
 const overviewSchema = {
   name: String,
@@ -28,25 +28,6 @@ const articleSchema = {
 };
 
 const Article = mongoose.model("Article", articleSchema);
-
-// const news1 = new Article({
-//   name: "XRP taking over the world",
-//   date: "27.09.2021",
-//   photo: "https://play-lh.googleusercontent.com/aCyq5_tBBCKcD5f4yuiE3kaNc1HDbPLA7Tq7PoEqBk1RVODSqJQUYpB_ekCrW23qnhw",
-//   content: "This is final, XRP takes over the banking system",
-//   author: "Daniel Nyikó"
-// });
-//
-// news1.save();
-
-// const xrp = new Overview({
-//     name: "XRP",
-//     description: "Opis XRP",
-//     logo: "fab fa-btc"
-//   });
-//
-// xrp.save();
-
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -89,6 +70,8 @@ app.get("/overview/:overviewId", function(req, res){
     console.log(overview.logo);
   });
 });
+
+rendering.PanelRendering(app);
 
 app.get("/panel", function(req, res){
   var i = 0;

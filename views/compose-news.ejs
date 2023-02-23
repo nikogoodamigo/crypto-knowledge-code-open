@@ -1,21 +1,21 @@
 <%- include('partials/panel-header'); -%>
-<h1 class="main-h1"> Compose Article </h1>
+<h1 class="main-h1"> Nowy Artykuł </h1>
 
 <form action="/compose-news" method="post">
   <div class="compose-form" action="index.html" method="post">
-    <label>Author</label>
-    <input class="form-control" placeholder="Author's name" type="text" name="articleAuthor">
-    <label>Title</label>
-    <input class="form-control" placeholder="Name your article" type="text" name="articleName">
-    <label>Post Content</label>
-    <textarea class="form-control" placeholder="Write your article" name="articleContent" style="height: 300px;"></textarea>
-    <label>Photo</label>
-    <input class="form-control" placeholder="Link a photograph" type="text" name="articlePhoto">
-    <label>Date</label>
-    <input class="form-control" placeholder="Choose Date" type="text" name="articleDate">
+    <label>Autor</label>
+    <input class="form-control" placeholder="Imie i nazwisko autora" type="text" name="articleAuthor">
+    <label>Tytuł</label>
+    <input class="form-control" placeholder="Tytuł artykułu" type="text" name="articleName">
+    <label>Treść</label>
+    <textarea class="form-control" placeholder="Napisz treść artukułu" name="articleContent" style="height: 300px;"></textarea>
+    <label>Zdjęcie</label>
+    <input class="form-control" placeholder="Wklej link do fotografii" type="text" name="articlePhoto">
+    <label>Data</label>
+    <input class="form-control" placeholder="Wpisz datę" type="text" name="articleDate">
     <p>
   </div>
-    <button type="submit" name="button" class="btn btn-primary">Opublikuj</button>
+    <button type="submit" name="button" class="btn btn-primary">Zapisz i opublikuj</button>
 </form>
 
 <form class="" action="/panel" method="get">
