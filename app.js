@@ -2,6 +2,7 @@ const express = require("express");
 const https = require("https");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const rendering = require("./functions/rendering");
 
 mongoose.connect("mongodb://localhost:27017/cryptoDB", {
   useUnifiedTopology: true,
@@ -31,9 +32,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 
-app.get("/", function(req, res){
-  res.render("home");
-});
+rendering.Rendering(app);
 
 app.get("/news", function(req, res){
   Article.find({}, function(err, articles){
@@ -49,10 +48,6 @@ app.get("/cryptos", function(req, res){
       overviews: overviews
     })
   });
-});
-
-app.get("/prices", function(req, res){
-  res.render("prices");
 });
 
 app.get("/overview/:overviewId", function(req, res){
@@ -106,10 +101,6 @@ app.get("/panel-news", function(req, res){
       articles: articles
     })
   });
-});
-
-app.get("/compose-crypto", function(req, res){
-  res.render("compose-crypto");
 });
 
 app.post("/compose-crypto", function(req, res) {
@@ -174,10 +165,6 @@ app.post("/delete-crypto", function(req, res){
     });
 });
 
-app.get("/compose-news", function(req, res){
-  res.render("compose-news");
-});
-
 app.post("/compose-news", function(req, res) {
 
   const articleAuthor = req.body.articleAuthor;
@@ -233,7 +220,6 @@ app.post("/update-news", function(req, res){
   });
 });
 
-
 app.post("/delete-news", function(req, res){
   const deletedItemId= req.body.button;
   console.log(deletedItemId);
@@ -248,8 +234,6 @@ app.post("/delete-news", function(req, res){
       }
     });
 });
-
-
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Server is running on port 3000");
