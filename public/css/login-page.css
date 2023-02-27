@@ -1,0 +1,18 @@
+body{
+    font-family:' Montserrat', sans-serif;
+  }
+
+.main{
+    min-height: 575px;
+}
+
+.form-box{
+    text-align: left;
+    width: 800px;
+    border-color: #A9A9A9;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    padding: 4% 8%;
+    margin: 100px auto 0px auto;
+}
