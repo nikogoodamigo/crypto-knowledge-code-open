@@ -8,11 +8,15 @@ body{
 
 .form-box{
     text-align: left;
-    width: 800px;
+    width: 700px;
     border-color: #A9A9A9;
     border-style: solid;
     border-width: 1px;
     border-radius: 15px;
-    padding: 4% 8%;
+    padding: 4% 6%;
     margin: 100px auto 0px auto;
+}
+
+.btn{
+    width: 100%;
 }

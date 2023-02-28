@@ -3,6 +3,7 @@ const https = require("https");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const rendering = require("./functions/rendering");
+const verification = require("./functions/verification");
 
 mongoose.connect("mongodb://localhost:27017/cryptoDB", {
   useUnifiedTopology: true,
