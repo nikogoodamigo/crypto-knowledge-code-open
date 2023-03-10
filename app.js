@@ -28,6 +28,20 @@ const articleSchema = {
 
 const Article = mongoose.model("Article", articleSchema);
 
+const userSchema = {
+  username: String,
+  password: String
+};
+
+const User = mongoose.model("User", userSchema);
+
+const admin = new User({
+  username: 'daniel@gmail.com',
+  password: 'password'
+});
+
+// admin.save();
+
 const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -64,7 +78,13 @@ app.get("/overview/:overviewId", function(req, res){
   });
 });
 
+app.post("/login-page", function(req, res){
+  const typedUserName = req.body.username;
+  verification.CheckLogin(User, typedUserName, res);
+});
+
 app.get("/panel", function(req, res){
+
   var i = 0;
   var k = 0;
 
