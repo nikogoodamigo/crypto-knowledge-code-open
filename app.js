@@ -5,7 +5,10 @@ const mongoose = require("mongoose");
 const rendering = require("./functions/rendering");
 const verification = require("./functions/verification");
 
-mongoose.connect("mongodb+srv://dan-admin:C501EABEBFC55F509A32104E8AE9A525@cluster0.c4zsp.mongodb.net/cryptoDB", {useUnifiedTopology: true, useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/cryptoDB", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+});
 
 const overviewSchema = {
   name: String,
