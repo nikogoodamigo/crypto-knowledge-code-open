@@ -1,9 +1,24 @@
+if(process.env.NODE_ENV !== 'production'){
+  require('dotenv').config();
+};
+
 const express = require("express");
 const https = require("https");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+const passport = require("passport");
+const flash = require("express-flash");
+const session = require("express-session");
+
 const rendering = require("./functions/rendering");
 const verification = require("./functions/verification");
+const initializePassport = require("./functions/passport-config");
+
+initializePassport.initialize(
+  passport,
+  username => User.findOne({username: username}
+  ));
 
 mongoose.connect("mongodb://localhost:27017/cryptoDB", {
   useUnifiedTopology: true,
@@ -46,6 +61,14 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
+app.use(flash());
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 rendering.Rendering(app);
 

@@ -1,4 +1,5 @@
 
+
     function CheckLogin(user, typedUserName, res){
 
         user.findOne({_id: typedUserName}, function(err){
